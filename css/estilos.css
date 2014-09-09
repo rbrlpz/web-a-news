@@ -1,0 +1,6 @@
+body{font-family:tahoma,arial,verdana,san-serif}
+.main_header{background:url("../imagenes/header-bg.png") #292e2f;height:160px;}
+.main_header .logo img{height:60px;left:80px;position:absolute;top:42px;width:80px}
+.main_header h1{color:#f1f1f1;font-size:22px;left:180px;position:absolute;top:75px;}
+.main_header h1 .news{color:#444}
+.main_header .slogan{color:#fff;font-size:14px;font-weight:bold}
