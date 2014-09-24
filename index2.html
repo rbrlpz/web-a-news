@@ -48,27 +48,18 @@
 		<footer>
 			<div class="clase">Topicos Avanzados de programación web</div>
 			<div class="copyright">(c) Fernando Alonso Tapia Gonzalez</div>
-            </footer>
-        <script id="tplNews" type="text/x-handlebars-template">
-            <h3 class="titulo">{{title}}</h3>
-            <figure>
-            <img src="{{image}}" alt="{{title}}">
-            <figcaption>{{date}}</figcaption>
-            </figure>
-            <div class="contenido">{{summary}}</div>
-            <p class="autor">Autor: {{author}}</p>
+         </footer>
+        <script id="tpl_view" type='text/x-handlebars-template'>
+            <h3 class="titulo">{{titulo}}</h3>
+            <figure><img src="{{image}}"><figcaption>{{date}}</figcaption></figure>
+            <div class="contenido">{{content}}</div>
+            <p class="autor">Autor:{{author}}</p>
             <a class="leer_mas">Leer más</a>
         </script>
         <script src="js/lib/jquery.min.js"></script>
         <script src="js/lib/underscore-min.js"></script>
         <script src="js/lib/backbone-min.js"></script>
         <script src="js/lib/handlebars-v2.0.0.js"></script>
-        <script src="js/app.js"></script>
-
-        <script src="js/models/news.js"></script>
-        <script src="js/views/news.js"></script>
-        <script src="js/collections/news.js"></script>
-        <script src="js/routers/news.js"></script>
+        <script src="js/main2.js"></script>
 	</body>
-
 </html>
