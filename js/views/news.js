@@ -1,8 +1,20 @@
-WebANews.NewsView = Backbone.View.extend({
-    tagName:"article",
-    className:"noticia",
+WebANews.Views.News = Backbone.View.extend({
+    el: $(".noticias"),
     template: Handlebars.compile($("#tplNews").html()),
     render:function(){
-        this.$el.append(this.template(this.model.toJSON()));
+        this.collection.forEach(this.addOneNews, this);
+    },
+
+    initialize: function(){
+        console.log(this.collection);
+        this.listenTo(this.collection, "add", this.addOneNews, this);
+    },
+
+    addOneNews: function(news){
+       this.$el.append()
+        var newsView = new WebANews.Views.SingleNews({model:news, el:this.$el});
+        debugger;
+        newsView.render();
+        this.$el.append(newsView.el);
     }
 });

@@ -1,1 +1,1 @@
-WebANews.NewsModel = Backbone.Model.extend({});
+WebANews.Models.News = Backbone.Model.extend({});
