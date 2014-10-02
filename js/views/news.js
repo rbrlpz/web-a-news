@@ -13,7 +13,6 @@ WebANews.Views.News = Backbone.View.extend({
     addOneNews: function(news){
        this.$el.append()
         var newsView = new WebANews.Views.SingleNews({model:news, el:this.$el});
-        debugger;
         newsView.render();
         this.$el.append(newsView.el);
     }

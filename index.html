@@ -54,7 +54,8 @@
                 
                 </article>
                 </script>
-        <script id="single-news" type="text/x-handlebars-template">
+                <script id="single-news" type="text/x-handlebars-template">
+                    <article class="noticia">
             <h3 class="titulo">{{title}}</h3>
             <figure>
             <img src="{{image}}" alt="{{title}}">
@@ -62,7 +63,18 @@
             </figure>
             <div class="contenido">{{summary}}</div>
             <p class="autor">Autor: {{author}}</p>
-            <a class="leer_mas">Leer más</a>
+            <a class="leer_mas" id="{{id}}">Leer más</a>
+            </article>
+        </script>
+        <script id="fullNew" type="text/x-handlebars-template">
+            <h3 class="titulo">{{title}}</h3>
+            <figure>
+                <img src="{{image}}" alt="{{title}}">
+                <figcaption>{{date}}</figcaption>
+            </figure>
+            <dif class="contenido">{{content}}</div>
+        <p class="autor">Autor: {{author}}</p>
+        <a class="leer_mas">Regresar</a>
         </script>
         <script src="js/lib/jquery.min.js"></script>
         <script src="js/lib/underscore-min.js"></script>
@@ -73,6 +85,7 @@
         <script src="js/models/news.js"></script>
         <script src="js/views/single_news.js"></script>
         <script src="js/views/news.js"></script>
+        <script src="js/views/content-notice.js"></script>
         <script src="js/collections/news.js"></script>
         <script src="js/routers/news.js"></script>
 

@@ -18,7 +18,27 @@ WebANews.NewsRouter = Backbone.Router.extend({
         this.loadData();
     },
     news : function(id){
+        self = this;
         console.log("Consultando la noticia: "+id);
+        $(".noticia").remove();
+            $.getJSON("allformated.json").then(function(data){
+            self.jsonData = data;
+            console.log(data);
+        var fullNew = new WebANews.Views.ContentNotice({
+            model: new WebANews.Models.News({
+                id:id,
+                title: data[id].title,
+                content: data[id].content,
+                summary: data[id].summary,
+                image: data[id].image,
+                author : data[id].author,
+                date: data[id].date
+            })
+        });
+
+        fullNew.render();
+        $(".noticias").append(fullNew.el);
+            });
     },
 
     loadData:function(){
